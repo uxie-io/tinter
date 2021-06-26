@@ -26,7 +26,8 @@ export function Modal({ isOpen, closeModal }) {
           toggleCustomize()
         }
       }
-      if (!monoTone) {
+      // disable monoTone if new image uploaded
+      if (monoTone) {
         toggleTone()
       } 
     }
