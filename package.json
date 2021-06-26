@@ -1,0 +1,56 @@
+{
+  "name": "tinter",
+  "version": "1.0.0",
+  "description": "Generate tints of images",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run watch:css && webpack serve --config webpack.dev.js --open --hot",
+    "build": "set NODE_ENV=production&& npm run build:css && webpack --mode=production --devtool source-map --config webpack.prod.js",
+    "build:css": "postcss src/styles/tailwind.css -o src/styles/main.css",
+    "watch:css": "postcss src/styles/tailwind.css -o src/styles/main.css"
+  },
+  "keywords": [
+    "tinter",
+    "image",
+    "hue",
+    "color"
+  ],
+  "author": "Anup Aglawe",
+  "license": "ISC",
+  "dependencies": {
+    "@headlessui/react": "^1.2.0",
+    "@tailwindcss/forms": "^0.3.2",
+    "file-saver": "^2.0.5",
+    "preact": "^10.5.4",
+    "zustand": "^3.5.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-react-jsx": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.1.0",
+    "compression-webpack-plugin": "^6.0.3",
+    "css-loader": "^4.3.0",
+    "eslint": "^7.26.0",
+    "eslint-config-preact": "^1.1.4",
+    "file-loader": "^6.1.0",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^0.11.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "postcss": "^8.2.15",
+    "postcss-cli": "^8.0.0",
+    "postcss-loader": "^4.0.3",
+    "style-loader": "^1.3.0",
+    "tailwindcss": "^2.1.2",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
+  },
+  "eslintConfig": {
+    "extends": "preact"
+  }
+}

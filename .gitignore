@@ -1,0 +1,17 @@
+.DS_Store
+node_modules
+npm-debug.log
+dist
+*/package-lock.json
+.vscode
+.idea
+test/ts/**/*.js
+coverage
+*.sw[op]
+*.log
+package/
+preact-*.tgz
+preact.tgz
+jsx-csstype.d.ts
+
+.vercel

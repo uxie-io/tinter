@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+body ::-webkit-scrollbar {
+    width: 0.4em;
+  }
+   
+body ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+body ::-webkit-scrollbar-thumb {
+    background-color: rgb(73, 73, 73);
+    border-radius: 8px;
+  }
+
+  #out-grid-section:hover {
+    overflow: auto;
+    transition: all 1s ease;
+  }
