@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['plugin:import/recommended', 'airbnb', 'preact'],
+  extends: ['plugin:import/recommended', 'preact'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -13,7 +13,11 @@ module.exports = {
   },
   plugins: [],
   settings: {
-    'import/extensions': ['.js', '.jsx'],
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx'],
+      },
+    },
   },
   rules: {
     semi: 'off',
