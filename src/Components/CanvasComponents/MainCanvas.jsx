@@ -1,14 +1,14 @@
 import { h } from 'preact'
 import { useEffect, useState } from 'preact/hooks'
-import useCanvas from '../hooks/useCanvas'
-import { useStore } from '../hooks/useStore'
-import { loadElement } from '../utils/loadElement'
-import { downscaleDrawCanvasImage } from '../utils/downscaleCanvasImage'
-import { dynamicCanvasResize } from '../utils/dynamicCanvasResize'
-import { getParams } from '../constants'
-import { runWorker } from '../worker/runWorker'
-import Spinner from './UI/Spinner'
-import { useWindowSize } from './../hooks/useWindowSize'
+import useCanvas from '../../hooks/useCanvas'
+import { useStore } from '../../hooks/useStore'
+import { loadElement } from '../../utils/loadElement'
+import { downscaleDrawCanvasImage } from '../../utils/downscaleCanvasImage'
+import { dynamicCanvasResize } from '../../utils/dynamicCanvasResize'
+import { getParams } from '../../constants'
+import { runWorker } from '../../worker/runWorker'
+import Spinner from '../UI/Spinner'
+import { useWindowSize } from '../../hooks/useWindowSize'
 
 const MainCanvas = (props) => {
   const [loading, setLoading] = useState(true)

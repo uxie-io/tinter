@@ -1,14 +1,14 @@
 import { Fragment, h } from 'preact'
 import Navbar from './UI/Navbar'
-import OutputGrid from './OutputGrid'
+import OutputGrid from './OutputSection/OutputGrid'
 import { useStore } from '../hooks/useStore'
-import { Modal } from './UI/modal'
+import { Modal } from './UI/Modal'
 import { useState } from 'preact/hooks'
-import ImageSection from './ImageSection'
-import ImageButtons from './ImageButtons'
-import AbstractArt from './AbstractArt'
+import ImageSection from './Main/ImageSection'
+import ImageButtons from './ImageButtons/ImageButtons'
+import AbstractArt from './AbstractArt/AbstractArt'
 import Toast from './UI/Toast'
-import GlowEffect from './GlowEffect'
+import GlowEffect from './AbstractArt/GlowEffect'
 
 function Home() {
   const showTints = useStore((state) => state.showTints)

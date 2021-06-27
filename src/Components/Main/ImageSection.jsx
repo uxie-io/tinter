@@ -1,8 +1,8 @@
 import { h } from 'preact'
-import ConfigBar from './ConfigBar'
-import MainCanvas from './MainCanvas'
-import { useStore } from './../hooks/useStore'
-import FenceImg from './../assets/fence.svg'
+import ConfigBar from '../MainConfig/ConfigBar'
+import MainCanvas from '../CanvasComponents/MainCanvas'
+import { useStore } from '../../hooks/useStore'
+import FenceImg from '../../assets/fence.svg'
 
 const ImageSection = () => {
   const selectedImage = useStore((state) => state.selectedImage)

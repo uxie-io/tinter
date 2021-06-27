@@ -1,9 +1,9 @@
 import { h } from 'preact'
-import { downloadImage } from '../utils/downloadImage'
-import { useStore } from './../hooks/useStore'
-import OutputCanvas from './OuputCanvas'
-import DownloadIcon from './../assets/download.svg'
-import { DEFAULT_HUE } from '../constants'
+import { downloadImage } from '../../utils/downloadImage'
+import { useStore } from '../../hooks/useStore'
+import OutputCanvas from '../CanvasComponents/OuputCanvas'
+import DownloadIcon from '../../assets/download.svg'
+import { DEFAULT_HUE } from '../../constants'
 
 export const AdjustedOutput = ({ color }) => {
   const selectedImage = useStore((state) => state.selectedImage)

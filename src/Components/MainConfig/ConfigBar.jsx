@@ -1,12 +1,12 @@
 import { h } from 'preact'
-import { useStore } from '../hooks/useStore'
-import Button from './UI/Button'
-import Checkbox from './UI/Checkbox'
-import ResetIcon from './../assets/reset.svg'
-import EditIcon from './../assets/edit.svg'
-import WandIcon from './../assets/wand.svg'
-import Slider from './UI/Slider'
-import { downloadImage } from '../utils/downloadImage'
+import { useStore } from '../../hooks/useStore'
+import Button from './../UI/Button'
+import Checkbox from './../UI/Checkbox'
+import ResetIcon from './../../assets/reset.svg'
+import EditIcon from './../../assets/edit.svg'
+import WandIcon from './../../assets/wand.svg'
+import Slider from './../UI/Slider'
+import { downloadImage } from '../../utils/downloadImage'
 
 const ConfigBar = () => {
   const {
