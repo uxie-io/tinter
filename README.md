@@ -1,8 +1,11 @@
 # Tinter
 
-Tinter is tiny web tool to generate color variation of images. We often use photoshop, just to render multiple hue variants of image and fine grain which works for us. This tool also generate monochrome colors of images with multiple variants, without hampering the quality of image. 
+![header](./header.png)
 
-![]('./ss.jpeg')
+Tinter is tiny web tool to generate color variation of images. We often use photoshop, just to render multiple hue variants of image and fine grain which works for us. This tool also generate monochrome colors of images with multiple variants, without hampering the quality of image. 
+#
+
+![image](./ss.jpeg)
 ---
 ## Features
 
