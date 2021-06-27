@@ -17,3 +17,6 @@ export const getParams = (canvas) => ({
   width: canvas.width * 2,
   height: canvas.height * 2,
 })
+
+export const UNSPLASH_URI =
+  'https://source.unsplash.com/random/600x350/?abstract,nature'

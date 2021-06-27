@@ -1,7 +1,9 @@
+import { UNSPLASH_URI } from '../constants'
+
 export const generateRandomURL = () =>
   new Promise((resolve) => {
     try {
-      fetch('https://source.unsplash.com/random/600x350').then((response) => {
+      fetch(UNSPLASH_URI).then((response) => {
         if (response.ok) {
           resolve({
             ok: true,
