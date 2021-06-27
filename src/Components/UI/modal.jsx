@@ -1,8 +1,9 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, h } from 'preact'
 import { useState, useEffect } from 'preact/hooks'
+
 import { useStore } from './../../hooks/useStore'
-import { getFileType } from './../../utils/getFileType'
+import { getFileType } from '../../utils/getFileType'
 
 export function Modal({ isOpen, closeModal }) {
   const [selectedFile, setSelectedFile] = useState(null)
@@ -29,7 +30,7 @@ export function Modal({ isOpen, closeModal }) {
       // disable monoTone if new image uploaded
       if (monoTone) {
         toggleTone()
-      } 
+      }
     }
   }, [selectImage, selectedFile])
 

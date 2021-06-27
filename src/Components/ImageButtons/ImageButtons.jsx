@@ -1,9 +1,9 @@
 import { h } from 'preact'
-import Button from './UI/Button'
-import UploadIcon from './../assets/upload.svg'
-import RandomIcon from './../assets/random.svg'
-import { generateRandomURL } from './../utils/generateRandomURL'
-import { useStore } from './../hooks/useStore'
+import Button from '../UI/Button'
+import UploadIcon from '../../assets/upload.svg'
+import RandomIcon from '../../assets/random.svg'
+import { generateRandomURL } from '../../utils/generateRandomURL'
+import { useStore } from '../../hooks/useStore'
 
 const ImageButtons = ({ openModal }) => {
   const {
@@ -14,7 +14,7 @@ const ImageButtons = ({ openModal }) => {
     selectImage,
     customize,
     toggleTone,
-    monoTone
+    monoTone,
   } = useStore()
 
   const handleLoadRandomImage = () => {
@@ -40,16 +40,14 @@ const ImageButtons = ({ openModal }) => {
         toggleTone()
       }
 
-
       if (showTints) {
         toggleTints()
-        
+
         if (customize) {
           toggleCustomize()
         }
       }
     })
-
   }
 
   return (
