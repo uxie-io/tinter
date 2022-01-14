@@ -28,7 +28,12 @@ function Navbar() {
       <div className="flex justify-end flex-1 mx-4 my-2 lg:mx-16">
         {!mobileSize ? (
           <Fragment>
-            <Button href="#" fontWeight="600" textSize="lg">
+            <Button
+              href="https://github.com/uxie-io/tinter"
+              target="blank"
+              fontWeight="600"
+              textSize="lg"
+            >
               Github
             </Button>
             <Button href="#" fontWeight="600" variant="white" textSize="lg">
