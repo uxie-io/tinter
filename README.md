@@ -2,7 +2,11 @@
 
 ![header](./header.png)
 
+
+<a href="https://www.buymeacoffee.com/anup" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" align="right" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a><br/>
+
 Tinter is tiny web tool to generate color variation of images. We often use photoshop, just to render multiple hue variants of image and fine grain which works for us. This tool also generate monochrome colors of images with multiple variants, without hampering the quality of image. 
+
 #
 
 ![image](./ss.jpeg)
