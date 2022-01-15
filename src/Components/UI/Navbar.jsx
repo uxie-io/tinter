@@ -2,8 +2,8 @@ import { Fragment, h } from 'preact'
 import TopImg from './../../assets/top.svg'
 import Button from './Button'
 import { useWindowSize } from './../../hooks/useWindowSize'
-import GithubIcon from './../../assets/github.svg'
-import BoxIcon from './../../assets/box.svg'
+// import GithubIcon from './../../assets/github.svg'
+// import BoxIcon from './../../assets/box.svg'
 
 function Navbar() {
   const { width } = useWindowSize()
@@ -25,7 +25,20 @@ function Navbar() {
         Tinter
         <div className="w-4 h-4 ml-4 align-bottom bg-white rounded-full" />
       </div>
-      <div className="flex justify-end flex-1 mx-4 my-2 lg:mx-16">
+      <div className="flex justify-end items-center flex-1 mx-4 my-2 lg:mx-16">
+        <a
+          class="buy-coffee"
+          href="https://www.buymeacoffee.com/anup"
+          target="_blank"
+          rel="noreferrer"
+          style={{ minWidth: '8em' }}
+        >
+          <img
+            src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+            alt="Buy Me A Coffee"
+          />
+        </a>
+
         {!mobileSize ? (
           <Fragment>
             <Button
@@ -42,7 +55,7 @@ function Navbar() {
           </Fragment>
         ) : (
           <Fragment>
-            <a
+            {/* <a
               href="#"
               className="mx-4 text-white"
               style={{ minWidth: '20px' }}
@@ -55,7 +68,7 @@ function Navbar() {
               style={{ minWidth: '20px' }}
             >
               <img src={BoxIcon} alt="" />
-            </a>
+            </a> */}
           </Fragment>
         )}
       </div>
