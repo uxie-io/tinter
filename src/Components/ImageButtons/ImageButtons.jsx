@@ -52,13 +52,13 @@ const ImageButtons = ({ openModal }) => {
 
   return (
     <div className="flex justify-center w-full mb-8 lg:mb-0">
-      <Button variant="glass" fontWeight="700" onClick={handleLoadRandomImage}>
-        <img src={RandomIcon} className="mr-2" alt="Random Image" />
-        <p>Random</p>
+      <Button variant="glass" fontWeight="400" onClick={handleLoadRandomImage}>
+        <img src={RandomIcon} className="w-4 mr-2" alt="Random Image" />
+        <p className="text-sm">Random</p>
       </Button>
       <Button variant="glass" fontWeight="700" onClick={() => openModal()}>
-        <img src={UploadIcon} className="mr-2" alt="Upload Image Button" />{' '}
-        <p>Upload Image</p>
+        <img src={UploadIcon} className="w-4 mr-2" alt="Upload Image Button" />{' '}
+        <p className="text-sm">Upload Image</p>
       </Button>
     </div>
   )

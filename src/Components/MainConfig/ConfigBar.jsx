@@ -46,12 +46,12 @@ const ConfigBar = () => {
 
   return (
     <div className="flex flex-col justify-around w-full h-full">
-      <div className="flex items-center mb-8 justify-evenly lg:mb-0">
+      <div className="flex items-center justify-end mx-4 mb-8 lg:mb-0">
         <Checkbox onChange={handleChange} checked={monoTone} text="Montone" />
 
         {!customize ? (
           <div className="flex cursor-pointer" onClick={toggleCustomize}>
-            <p className="mr-6 text-xl font-bold text-center text-white font-plex">
+            <p className="ml-6 mr-6 font-bold text-center text-white text-md font-plex">
               Fine tune
             </p>
             <img src={EditIcon} className="ml-2" alt="reset icon" />
@@ -73,7 +73,7 @@ const ConfigBar = () => {
         )}
       </div>
 
-      <div className="flex justify-center mb-8 lg:mb-0">
+      <div className="flex justify-end mb-8 text-md lg:mb-0">
         <Button
           variant="glass"
           onClick={() => {
@@ -88,7 +88,7 @@ const ConfigBar = () => {
           }}
         >
           Reset
-          <img src={ResetIcon} className="ml-2" alt="reset icon" />
+          <img src={ResetIcon} className="w-4 ml-2" alt="reset icon" />
         </Button>
         <Button
           href="#"
@@ -97,7 +97,7 @@ const ConfigBar = () => {
           colorRGB="#8A539D"
         >
           {'Generate Tints'}
-          <img src={WandIcon} className="ml-2" alt="wand icon" />
+          <img src={WandIcon} className="w-4 ml-2" alt="wand icon" />
         </Button>
       </div>
     </div>
