@@ -112,7 +112,7 @@
         z-index: 999999;
         display: -ms-grid;
         display: grid;
-        justify-items: end;
+        justify-items: start;
         grid-auto-columns: 1fr;
         grid-column-gap: 16px;
         grid-row-gap: 8px;
@@ -163,7 +163,7 @@
       }
 
       .callout {
-        width: 300px;
+        width: 256px;
       }
     </style>
   </head>
@@ -182,6 +182,7 @@
         data-dsads-action="close"
         data-dsads-close-container-id="ds-callout"
         class="bm-bt-close bm-shadow"
+        onclick="closePopup(event)"
         >X</a
       >
 
@@ -205,6 +206,10 @@
         document.querySelector('#loader-container').style.display = 'none'
         document.querySelector('#app').style.display = 'block'
       }
+    }
+    function closePopup(e) {
+      document.querySelector('#ds-callout').style.display = 'none'
+      e.stopPropagation()
     }
   </script>
 </html>
