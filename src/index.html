@@ -1,219 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta
-      name="description"
-      content="Tinter is a simple design tool to generate color/hue variation of images with custom fine tuning. Change Hue Online without any privacy concerns, no server uploads."
-    />
-    <meta
-      name="title"
-      content="Tinter - Generate color image variations. Change hue online without server uploads. Privacy focused."
-    />
-    <title>Tinter - Generate color image variations. Change hue online</title>
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.tinter.uxie.io" />
-    <meta
-      property="og:title"
-      content="Tinter - Generate color image variations. Change hue online without server uploads. Privacy focused."
-    />
-    <meta
-      property="og:description"
-      content="Tinter is a simple design tool to generate color/hue variation of images with custom fine tuning. Change Hue Online without any privacy concerns, no server uploads. Generate monoTone Images"
-    />
-    <meta
-      property="og:image"
-      content="https://i.ibb.co/YRZrTyR/Screenshot-2021-06-11-at-3-20-21-AM.png"
-    />
-    <meta
-      property="twitter:card"
-      content="Tinter (Uxie.io). Generate color variation of Images."
-    />
-    <meta property="twitter:url" content="https://www.tinter.uxie.io" />
-    <meta
-      property="twitter:title"
-      content="Tinter (Uxie.io). Generate color variation of Images. Change hue online (privately)."
-    />
-    <meta
-      property="twitter:description"
-      content="Tinter is a simple design tool to generate color/hue variation of images with custom fine tuning. Change Hue Online without any privacy concerns, no server uploads. Generate monoTone Images"
-    />
-    <meta property="twitter:image" content="./assets/ss.jpeg" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-110192731-2"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || []
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-      gtag('js', new Date())
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      gtag('config', 'G-V0XZNF1N6G')
-    </script>
-
-    <style>
-      #loader-container {
-        background: black;
-        position: fixed;
-        width: 100%;
-        z-index: 1000;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .loader {
-        width: 80px;
-        height: 80px;
-        background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg' stroke='%23fff'%3E%3Cg fill='none' fill-rule='evenodd' transform='translate(1 1)' stroke-width='2'%3E%3Ccircle cx='22' cy='22' r='6' stroke-opacity='0'%3E%3Canimate attributeName='r' begin='1.5s' dur='3s' values='6;22' calcMode='linear' repeatCount='indefinite' /%3E%3Canimate attributeName='stroke-opacity' begin='1.5s' dur='3s' values='1;0' calcMode='linear' repeatCount='indefinite' /%3E%3Canimate attributeName='stroke-width' begin='1.5s' dur='3s' values='2;0' calcMode='linear' repeatCount='indefinite' /%3E%3C/circle%3E%3Ccircle cx='22' cy='22' r='6' stroke-opacity='0'%3E%3Canimate attributeName='r' begin='3s' dur='3s' values='6;22' calcMode='linear' repeatCount='indefinite' /%3E%3Canimate attributeName='stroke-opacity' begin='3s' dur='3s' values='1;0' calcMode='linear' repeatCount='indefinite' /%3E%3Canimate attributeName='stroke-width' begin='3s' dur='3s' values='2;0' calcMode='linear' repeatCount='indefinite' /%3E%3C/circle%3E%3Ccircle cx='22' cy='22' r='8'%3E%3Canimate attributeName='r' begin='0s' dur='1.5s' values='6;1;2;3;4;5;6' calcMode='linear' repeatCount='indefinite' /%3E%3C/circle%3E%3C/g%3E%3C/svg%3E");
-      }
-      .bm-better-metter-holder {
-        all: unset;
-      }
-      @media screen and (max-width: 600px) {
-        .bm-better-metter-holder {
-          visibility: hidden;
-          display: none;
-        }
-
-        .bm-bt-close {
-          visibility: hidden;
-          display: none;
-        }
-      }
-
-      .bm-better-metter-holder {
-        font-family: Arial, sans-serif;
-        position: static;
-        left: 20px;
-        bottom: 20px;
-        padding: 5px;
-        border-radius: 20px;
-        cursor: pointer;
-      }
-
-      .bm-better-metter-holder:hover {
-        background-color: #f9f9f9;
-      }
-
-      .bm-better-meter {
-        position: fixed;
-        left: 20px;
-        bottom: 20px;
-        z-index: 999999;
-        display: -ms-grid;
-        display: grid;
-        justify-items: start;
-        grid-auto-columns: 1fr;
-        grid-column-gap: 16px;
-        grid-row-gap: 8px;
-        -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-        -ms-grid-rows: auto auto;
-        grid-template-rows: auto auto;
-      }
-
-      .bm-shadow {
-        box-shadow: 6px 6px 30px -7px rgba(0, 0, 0, 0.21);
-      }
-
-      .ds-overlay-button {
-        display: inline-block;
-        padding: 10px 20px;
-        border-radius: 14px;
-        background-color: #6dd0fe;
-        font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-        font-size: 12px;
-        line-height: 20px;
-        font-weight: 700;
-        text-decoration: none;
-        color: #391145;
-      }
-
-      .bm-bt-close {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        width: 30px;
-        height: 30px;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center;
-        border-radius: 20px;
-        text-decoration: none;
-        font-family: Arial, sans-serif;
-        background-color: #fff;
-        cursor: pointer;
-        opacity: 0.2;
-      }
-
-      .callout {
-        width: 256px;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="app"></div>
-    <div id="loader-container">
-      <div class="loader"></div>
-    </div>
-
-    <div
-      id="ds-callout"
-      class="bm-better-meter"
-      onclick='document.location = "https://designstripe.com?utm_source=tinter&utm_medium=bettermeter&utm_campaign=customize&utm_content=static_orange"'
-    >
-      <a
-        data-dsads-action="close"
-        data-dsads-close-container-id="ds-callout"
-        class="bm-bt-close bm-shadow"
-        onclick="closePopup(event)"
-        >X</a
-      >
-
-      <div
-        onclick="dsads.loadUrl(this)"
-        class="bm-link-wrapper bm-better-metter-holder"
-      >
-        <img
-          class="callout"
-          src="https://ds-blog-assets.s3.amazonaws.com/ds_callout1.png"
-        />
-      </div>
-    </div>
-  </body>
-
+  <meta name="description"
+    content="Tinter is a simple design tool to generate color/hue variation of images with custom fine tuning. Change Hue Online without any privacy concerns, no server uploads." />
+  <meta name="title"
+    content="Tinter - Generate color image variations. Change hue online without server uploads. Privacy focused." />
+  <title>Tinter - Generate color image variations. Change hue online</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.tinter.uxie.io" />
+  <meta property="og:title"
+    content="Tinter - Generate color image variations. Change hue online without server uploads. Privacy focused." />
+  <meta property="og:description"
+    content="Tinter is a simple design tool to generate color/hue variation of images with custom fine tuning. Change Hue Online without any privacy concerns, no server uploads. Generate monoTone Images" />
+  <meta property="og:image" content="https://i.ibb.co/YRZrTyR/Screenshot-2021-06-11-at-3-20-21-AM.png" />
+  <meta property="twitter:card" content="Tinter (Uxie.io). Generate color variation of Images." />
+  <meta property="twitter:url" content="https://www.tinter.uxie.io" />
+  <meta property="twitter:title"
+    content="Tinter (Uxie.io). Generate color variation of Images. Change hue online (privately)." />
+  <meta property="twitter:description"
+    content="Tinter is a simple design tool to generate color/hue variation of images with custom fine tuning. Change Hue Online without any privacy concerns, no server uploads. Generate monoTone Images" />
+  <meta property="twitter:image" content="./assets/ss.jpeg" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110192731-2"></script>
   <script>
-    document.onreadystatechange = function () {
-      if (state === 'interactive') {
-        document.querySelector('#app').style.display = 'none'
-      } else if (state === 'complete') {
-        document.querySelector('#loader-container').style.display = 'none'
-        document.querySelector('#app').style.display = 'block'
-      }
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+      dataLayer.push(arguments)
     }
-    function closePopup(e) {
-      document.querySelector('#ds-callout').style.display = 'none'
-      e.stopPropagation()
-    }
+    gtag('js', new Date())
+
+    gtag('config', 'G-V0XZNF1N6G')
   </script>
-  <script>
-    ;(function (d, s, id, wid) {
+
+  <style>
+    #loader-container {
+      background: black;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loader {
+      width: 80px;
+      height: 80px;
+      background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg' stroke='%23fff'%3E%3Cg fill='none' fill-rule='evenodd' transform='translate(1 1)' stroke-width='2'%3E%3Ccircle cx='22' cy='22' r='6' stroke-opacity='0'%3E%3Canimate attributeName='r' begin='1.5s' dur='3s' values='6;22' calcMode='linear' repeatCount='indefinite' /%3E%3Canimate attributeName='stroke-opacity' begin='1.5s' dur='3s' values='1;0' calcMode='linear' repeatCount='indefinite' /%3E%3Canimate attributeName='stroke-width' begin='1.5s' dur='3s' values='2;0' calcMode='linear' repeatCount='indefinite' /%3E%3C/circle%3E%3Ccircle cx='22' cy='22' r='6' stroke-opacity='0'%3E%3Canimate attributeName='r' begin='3s' dur='3s' values='6;22' calcMode='linear' repeatCount='indefinite' /%3E%3Canimate attributeName='stroke-opacity' begin='3s' dur='3s' values='1;0' calcMode='linear' repeatCount='indefinite' /%3E%3Canimate attributeName='stroke-width' begin='3s' dur='3s' values='2;0' calcMode='linear' repeatCount='indefinite' /%3E%3C/circle%3E%3Ccircle cx='22' cy='22' r='8'%3E%3Canimate attributeName='r' begin='0s' dur='1.5s' values='6;1;2;3;4;5;6' calcMode='linear' repeatCount='indefinite' /%3E%3C/circle%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    @media screen and (max-width: 1440px) {
+      .callout {
+        width: 256px !important;
+
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <div id="loader-container">
+    <div class="loader"></div>
+  </div>
+
+</body>
+
+<script>
+  document.onreadystatechange = function () {
+    if (state === 'interactive') {
+      document.querySelector('#app').style.display = 'none'
+    } else if (state === 'complete') {
+      document.querySelector('#loader-container').style.display = 'none'
+      document.querySelector('#app').style.display = 'block'
+    }
+  }
+</script>
+<script>
+    ; (function (d, s, id, wid) {
       var js,
         fjs = d.getElementsByTagName(s)[0]
       if (d.getElementById(id)) {
@@ -227,5 +97,6 @@
       js.src = 'https://analytics-dev.bettermeter.com/analytics.js'
       fjs.parentNode.insertBefore(js, fjs)
     })(document, 'script', 'bm-jssdk', '294995360')
-  </script>
+</script>
+
 </html>
