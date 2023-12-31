@@ -14,7 +14,7 @@ const ImageSection = () => {
           <MainCanvas src={selectedImage} />
         </div>
         <div
-          className="flex items-center justify-center flex-1 lg:h-2/5"
+          className="flex items-center justify-center flex-1 mx-auto lg:h-1/5"
           style={{ width: '80%' }}
         >
           <ConfigBar />

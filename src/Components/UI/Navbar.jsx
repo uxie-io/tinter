@@ -26,19 +26,6 @@ function Navbar() {
         <div className="w-4 h-4 ml-4 align-bottom bg-white rounded-full" />
       </div>
       <div className="flex justify-end items-center flex-1 mx-4 my-2 lg:mx-16">
-        <a
-          class="buy-coffee"
-          href="https://www.buymeacoffee.com/anup"
-          target="_blank"
-          rel="noreferrer"
-          style={{ minWidth: '8em' }}
-        >
-          <img
-            src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-            alt="Buy Me A Coffee"
-          />
-        </a>
-
         {!mobileSize ? (
           <Fragment>
             <Button
@@ -49,8 +36,13 @@ function Navbar() {
             >
               Github
             </Button>
-            <Button href="#" fontWeight="600" variant="white" textSize="lg">
-              Uxie
+            <Button
+              href="https://creatica.app"
+              fontWeight="600"
+              variant="white"
+              textSize="lg"
+            >
+              Creatica
             </Button>
           </Fragment>
         ) : (

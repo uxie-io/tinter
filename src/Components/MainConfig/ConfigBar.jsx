@@ -45,8 +45,8 @@ const ConfigBar = () => {
   }
 
   return (
-    <div className="flex flex-col justify-around w-full h-full">
-      <div className="flex items-center justify-end mx-4 mb-8 lg:mb-0">
+    <div className="flex flex-col w-full h-full gap-8">
+      <div className="flex items-center justify-center mx-4 my-8 ">
         <Checkbox onChange={handleChange} checked={monoTone} text="Montone" />
 
         {!customize ? (
@@ -73,7 +73,7 @@ const ConfigBar = () => {
         )}
       </div>
 
-      <div className="flex justify-end mb-8 text-md lg:mb-0">
+      <div className="flex justify-center  mb-8 text-md lg:mb-0">
         <Button
           variant="glass"
           onClick={() => {
